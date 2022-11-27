@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Android Development </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="Name">
+
+        <item>Quiz set 1</item>
+        <item>Quiz set 2</item>
+        <item>Quiz set 3</item>
+        <item>Quiz set 4</item>
+        <item>Quiz set 5</item>
+        <item>Quiz set 6</item>
+        <item>Quiz set 7</item>
+        <item>Quiz set 8</item>
+        <item>Quiz set 9</item>
+        <item>Quiz set 10</item>
+        <item>Quiz set 11</item>
+        <item>Quiz set 12</item>
+
+
+    </string-array>
+</resources>

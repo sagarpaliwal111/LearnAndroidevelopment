@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/dashboard"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:menuCategory="secondary"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/aboutus"
+            android:icon="@drawable/ic_baseline_info_24"
+            android:menuCategory="secondary"
+            android:title="About Us" />
+        <item
+            android:id="@+id/shareapp"
+            android:icon="@drawable/ic_baseline_share_24"
+            android:menuCategory="secondary"
+            android:title="Share App" />
+        <item
+            android:id="@+id/feedback"
+            android:icon="@drawable/ic_baseline_feedback_24"
+            android:menuCategory="secondary"
+            android:title="Feedback" />
+        <item
+            android:id="@+id/PrivacyPolicy"
+            android:icon="@drawable/ic_baseline_policy_24"
+            android:menuCategory="secondary"
+            android:title="PrivacyPolicy" />
+        <item
+            android:id="@+id/MoreApplication"
+            android:icon="@drawable/ic_baseline_more_24"
+            android:menuCategory="secondary"
+            android:title="More Application" />
+
+
+    </group>
+
+    <item
+        android:menuCategory="secondary"
+        android:title="More">
+        <menu>
+
+            <item
+                android:id="@+id/rateus"
+                android:icon="@drawable/ic_baseline_stars_24"
+                android:menuCategory="secondary"
+                android:title="Rate Us" />
+
+
+        </menu>
+    </item>
+    <item android:menuCategory="system"
+        android:title="Version: 1.0.2">
+
+
+    </item>
+
+</menu>

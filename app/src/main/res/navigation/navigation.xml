@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation.xml"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_compilerFragment"
+            app:destination="@id/compilerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_tutorialListFragment"
+            app:destination="@id/tutorialListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mainProgramFragment"
+            app:destination="@id/mainProgramFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_privacyPolicy"
+            app:destination="@id/privacyPolicy" />
+        <action
+            android:id="@+id/action_homeFragment_to_upgradeProFragment"
+            app:destination="@id/upgradeProFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_getCertificate"
+            app:destination="@id/getCertificate" />
+        <action
+            android:id="@+id/action_homeFragment_to_expandableListViews"
+            app:destination="@id/expandableListViews" />
+        <action
+            android:id="@+id/action_homeFragment_to_javaMainQuiz"
+            app:destination="@id/javaMainQuiz" />
+        <action
+            android:id="@+id/action_homeFragment_to_result_Activity_Quiz_First"
+            app:destination="@id/result_Activity_Quiz_First" />
+    </fragment>
+    <fragment
+        android:id="@+id/compilerFragment"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.CompilerFragment"
+        android:label="fragment_compiler"
+        tools:layout="@layout/fragment_compiler" >
+        <action
+            android:id="@+id/action_compilerFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/tutorialListFragment"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.TutorialListFragment"
+        android:label="fragment_tutorial_list"
+        tools:layout="@layout/fragment_tutorial_list" >
+        <action
+            android:id="@+id/action_tutorialListFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_tutorialListFragment_to_webView"
+            app:destination="@id/webView" />
+        <argument
+            android:name="list"
+            app:argType="float"
+            android:defaultValue="1" />
+    </fragment>
+    <fragment
+        android:id="@+id/webView"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.WebView"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" >
+        <action
+            android:id="@+id/action_webView_to_tutorialListFragment"
+            app:destination="@id/tutorialListFragment"
+            app:popUpTo="@id/tutorialListFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutUs"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.AboutUs"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" >
+        <action
+            android:id="@+id/action_aboutUs_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainProgramFragment"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.MainProgramFragment"
+        android:label="fragment_main_program"
+        tools:layout="@layout/fragment_main_program" >
+        <action
+            android:id="@+id/action_mainProgramFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_mainProgramFragment_to_tutorialListFragment"
+            app:destination="@id/tutorialListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/privacyPolicy"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.PrivacyPolicy"
+        android:label="fragment_privacy_policy"
+        tools:layout="@layout/fragment_privacy_policy" >
+        <action
+            android:id="@+id/action_privacyPolicy_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/upgradeProFragment"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.UpgradeProFragment"
+        android:label="fragment_upgrade_pro"
+        tools:layout="@layout/fragment_upgrade_pro" >
+        <action
+            android:id="@+id/action_upgradeProFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_upgradeProFragment_to_getCertificate"
+            app:destination="@id/getCertificate" />
+    </fragment>
+    <fragment
+        android:id="@+id/getCertificate"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.GetCertificate"
+        android:label="fragment_get_certificate"
+        tools:layout="@layout/fragment_get_certificate" >
+        <action
+            android:id="@+id/action_getCertificate_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/expandableListViews"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.ExpandableListViews"
+        android:label="fragment_expandable_list_views"
+        tools:layout="@layout/fragment_expandable_list_views" >
+        <action
+            android:id="@+id/action_expandableListViews_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/javaMainQuiz"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.JavaMainQuiz"
+        android:label="JavaMainQuiz" >
+        <action
+            android:id="@+id/action_javaMainQuiz_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_javaMainQuiz_to_result_Activity_Quiz_First"
+            app:destination="@id/result_Activity_Quiz_First" />
+        <action
+            android:id="@+id/action_javaMainQuiz_to_java_Quiz_First"
+            app:destination="@id/java_Quiz_First" />
+        <action
+            android:id="@+id/action_javaMainQuiz_to_java_Quiz_Second"
+            app:destination="@id/java_Quiz_Second" />
+        <action
+            android:id="@+id/action_javaMainQuiz_to_java_Quiz_Third"
+            app:destination="@id/java_Quiz_Third" />
+    </fragment>
+    <fragment
+        android:id="@+id/result_Activity_Quiz_First"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Result_Activity_Quiz_First"
+        android:label="fragment_result__activity__quiz__first"
+        tools:layout="@layout/fragment_result__activity__quiz__first" >
+        <action
+            android:id="@+id/action_result_Activity_Quiz_First_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_result_Activity_Quiz_First_to_javaMainQuiz"
+            app:destination="@id/javaMainQuiz" />
+        <argument
+            android:name="data"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_result_Activity_Quiz_First_to_java_Quiz_First"
+            app:destination="@id/java_Quiz_First" />
+        <argument
+            android:name="datafirst"
+            app:argType="string" />
+        <argument
+            android:name="datasecond"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/java_Quiz_First"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Java_Quiz_First"
+        android:label="Java_Quiz_First" >
+        <action
+            android:id="@+id/action_java_Quiz_First_to_result_Activity_Quiz_First"
+            app:destination="@id/result_Activity_Quiz_First" />
+        <action
+            android:id="@+id/action_java_Quiz_First_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/java_Quiz_Second"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Java_Quiz_Second"
+        android:label="Java_Quiz_Second" >
+        <action
+            android:id="@+id/action_java_Quiz_Second_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_java_Quiz_Second_to_result_Activity_Quiz_Second"
+            app:destination="@id/result_Activity_Quiz_Second" />
+    </fragment>
+    <fragment
+        android:id="@+id/java_Quiz_Third"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Java_Quiz_Third"
+        android:label="Java_Quiz_Third" >
+        <action
+            android:id="@+id/action_java_Quiz_Third_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_java_Quiz_Third_to_result_Activity_Quiz_Third"
+            app:destination="@id/result_Activity_Quiz_Third" />
+    </fragment>
+    <fragment
+        android:id="@+id/result_Activity_Quiz_Second"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Result_Activity_Quiz_Second"
+        android:label="fragment_result__activity__quiz__second"
+        tools:layout="@layout/fragment_result__activity__quiz__second" >
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Second_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="data"
+            app:argType="string" />
+        <argument
+            android:name="datafirst"
+            app:argType="string" />
+        <argument
+            android:name="datasecond"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Second_to_java_Quiz_Second"
+            app:destination="@id/java_Quiz_Second" />
+    </fragment>
+    <fragment
+        android:id="@+id/result_Activity_Quiz_Third"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Result_Activity_Quiz_Third"
+        android:label="fragment_result__activity__quiz__third"
+        tools:layout="@layout/fragment_result__activity__quiz__third" >
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Third_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Third_to_java_Quiz_Third"
+            app:destination="@id/java_Quiz_Third" />
+        <argument
+            android:name="data"
+            app:argType="string" />
+        <argument
+            android:name="datafirst"
+            app:argType="string" />
+        <argument
+            android:name="datasecond"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/java_Quiz_Four"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Java_Quiz_Four"
+        android:label="Java_Quiz_Four" >
+        <action
+            android:id="@+id/action_java_Quiz_Four_to_result_Activity_Quiz_Four"
+            app:destination="@id/result_Activity_Quiz_Four" />
+    </fragment>
+    <fragment
+        android:id="@+id/result_Activity_Quiz_Four"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Result_Activity_Quiz_Four"
+        android:label="Result_Activity_Quiz_Four" >
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Four_to_java_Quiz_Four"
+            app:destination="@id/java_Quiz_Four" />
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Four_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="data"
+            app:argType="string" />
+        <argument
+            android:name="datafirst"
+            app:argType="string" />
+        <argument
+            android:name="datasecond"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/java_Quiz_Five"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Java_Quiz_Five"
+        android:label="Java_Quiz_Five" >
+        <action
+            android:id="@+id/action_java_Quiz_Five_to_result_Activity_Quiz_Five"
+            app:destination="@id/result_Activity_Quiz_Five" />
+    </fragment>
+    <fragment
+        android:id="@+id/result_Activity_Quiz_Five"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Result_Activity_Quiz_Five"
+        android:label="Result_Activity_Quiz_Five" >
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Five_to_java_Quiz_Five"
+            app:destination="@id/java_Quiz_Five" />
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Five_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="data"
+            app:argType="string" />
+        <argument
+            android:name="datafirst"
+            app:argType="string" />
+        <argument
+            android:name="datasecond"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/java_Quiz_Six"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Java_Quiz_Six"
+        android:label="Java_Quiz_Six" >
+        <action
+            android:id="@+id/action_java_Quiz_Six_to_result_Activity_Quiz_Six"
+            app:destination="@id/result_Activity_Quiz_Six" />
+    </fragment>
+    <fragment
+        android:id="@+id/result_Activity_Quiz_Six"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Result_Activity_Quiz_Six"
+        android:label="Result_Activity_Quiz_Six" >
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Six_to_java_Quiz_Six"
+            app:destination="@id/java_Quiz_Six" />
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Six_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="data"
+            app:argType="string" />
+        <argument
+            android:name="datafirst"
+            app:argType="string" />
+        <argument
+            android:name="datasecond"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/java_Quiz_Seven"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Java_Quiz_Seven"
+        android:label="Java_Quiz_Seven" >
+        <action
+            android:id="@+id/action_java_Quiz_Seven_to_result_Activity_Quiz_Seven"
+            app:destination="@id/result_Activity_Quiz_Seven" />
+    </fragment>
+    <fragment
+        android:id="@+id/result_Activity_Quiz_Seven"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Result_Activity_Quiz_Seven"
+        android:label="Result_Activity_Quiz_Seven" >
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Seven_to_java_Quiz_Seven"
+            app:destination="@id/java_Quiz_Seven" />
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Seven_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="data"
+            app:argType="string" />
+        <argument
+            android:name="datafirst"
+            app:argType="string" />
+        <argument
+            android:name="datasecond"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/java_Quiz_Eight"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Java_Quiz_Eight"
+        android:label="Java_Quiz_Eight" >
+        <action
+            android:id="@+id/action_java_Quiz_Eight_to_result_Activity_Quiz_Eight"
+            app:destination="@id/result_Activity_Quiz_Eight" />
+    </fragment>
+    <fragment
+        android:id="@+id/result_Activity_Quiz_Eight"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Result_Activity_Quiz_Eight"
+        android:label="Result_Activity_Quiz_Eight" >
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Eight_to_java_Quiz_Eight"
+            app:destination="@id/java_Quiz_Eight" />
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Eight_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="data"
+            app:argType="string" />
+        <argument
+            android:name="datafirst"
+            app:argType="string" />
+        <argument
+            android:name="datasecond"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/java_Quiz_Nine"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Java_Quiz_Nine"
+        android:label="Java_Quiz_Nine" >
+        <action
+            android:id="@+id/action_java_Quiz_Nine_to_result_Activity_Quiz_Nine"
+            app:destination="@id/result_Activity_Quiz_Nine" />
+    </fragment>
+    <fragment
+        android:id="@+id/result_Activity_Quiz_Nine"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Result_Activity_Quiz_Nine"
+        android:label="Result_Activity_Quiz_Nine" >
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Nine_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Nine_to_java_Quiz_Nine"
+            app:destination="@id/java_Quiz_Nine" />
+        <argument
+            android:name="data"
+            app:argType="string" />
+        <argument
+            android:name="datafirst"
+            app:argType="string" />
+        <argument
+            android:name="datasecond"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/java_Quiz_Ten"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Java_Quiz_Ten"
+        android:label="Java_Quiz_Ten" >
+        <action
+            android:id="@+id/action_java_Quiz_Ten_to_result_Activity_Quiz_Ten"
+            app:destination="@id/result_Activity_Quiz_Ten" />
+    </fragment>
+    <fragment
+        android:id="@+id/result_Activity_Quiz_Ten"
+        android:name="com.sagarpaliwal.learnAndroiddevelopement.fragment.Result_Activity_Quiz_Ten"
+        android:label="Result_Activity_Quiz_Ten" >
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Ten_to_java_Quiz_Ten"
+            app:destination="@id/java_Quiz_Ten" />
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Ten_to_java_Quiz_Ten2"
+            app:destination="@id/java_Quiz_Ten" />
+        <argument
+            android:name="data"
+            app:argType="string" />
+        <argument
+            android:name="datafirst"
+            app:argType="string" />
+        <argument
+            android:name="datasecond"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_result_Activity_Quiz_Ten_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
